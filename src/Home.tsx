@@ -18,11 +18,6 @@ const Home = () => {
     OnOpenPressMainModal,
 
     OnCloseOtherModal,
-
-    // OnConfirmPressBottomModal,
-    // OnOpenPressBottomModal,
-    // OnClosePressBottomModal,
-    // ifMainModalHideBottomModal,
   } = useViewModel();
 
   return (
@@ -39,14 +34,6 @@ const Home = () => {
         isModalVisible={isOtherModalVisible}
         onClosePress={OnCloseOtherModal}
       />
-
-      {/* <BottomModal
-        isModalVisible={isBottomModalVisible}
-        onClosePress={OnClosePressBottomModal}
-        onPress={OnOpenPressBottomModal}
-        onConfirmPress={OnConfirmPressBottomModal}
-        onModalHide={ifMainModalHideBottomModal}
-      /> */}
     </View>
   );
 };

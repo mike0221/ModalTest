@@ -5,14 +5,14 @@ const useViewModel = () => {
   
   const [isModalVisible, setModalVisible] = useState(false);
   const [isOtherModalVisible, setOtherModalVisible] = useState(false);
-  const [isBottomModalVisible, setBottomModalVisible] = useState(false);
-
   const [isModalHideSet, setModalHideSet] = useState(false);
 
   const OnConfirmPressMainModal = () => {
     console.log('Hello this is Evaent confrim press');
     setModalHideSet(true);
     setModalVisible(false);
+
+
   };
   
   const OnOpenPressMainModal = () => {
@@ -24,32 +24,10 @@ const useViewModel = () => {
   };
   
   const ifMainModalHideMainModal = () => {
-    if (isModalHideSet) {
+    // if (isModalHideSet) {
       setOtherModalVisible(true);
-    }
+    // }
   };
-
-  const OnConfirmPressBottomModal = () => {
-    console.log('Hello this is Event confirm press from bottom Modal');
-    setModalHideSet(true);
-    setBottomModalVisible(false);
-  };
-  
-  const OnOpenPressBottomModal = () => {
-    setBottomModalVisible(true);
-  };
-
-  const OnClosePressBottomModal = () => {
-    setBottomModalVisible(false);
-  };
-  
-  const ifMainModalHideBottomModal = () => {
-    if (isModalHideSet) {
-      setOtherModalVisible(true);
-    }
-  };
-
-
 
   const OnCloseOtherModal = () => {
     setOtherModalVisible(false);
@@ -61,8 +39,7 @@ const useViewModel = () => {
 
     isModalVisible,
     isOtherModalVisible,
-    isBottomModalVisible,
-
+  
     OnConfirmPressMainModal,
     OnClosePressMainModal,
     ifMainModalHideMainModal, 
@@ -70,10 +47,6 @@ const useViewModel = () => {
 
     OnCloseOtherModal,
 
-    OnConfirmPressBottomModal,
-    OnOpenPressBottomModal,
-    OnClosePressBottomModal,
-    ifMainModalHideBottomModal
   };
 };
 
